@@ -1,0 +1,736 @@
+{
+	"info": {
+		"_postman_id": "435ce727-5e6e-4c19-b3ed-d707796be962",
+		"name": "ProjectLess3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Dashboard",
+			"item": [
+				{
+					"name": "currentOrder",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdG5hbWUiOiJQYXVsIiwibGFzdG5hbWUiOiJQSE9FTklYIiwicGFzc3dvcmRfZGlnZXN0IjoiJDJiJDEwJGsuUUJsSVlEaDdnSTgvNVd1QnF1RnVQL01CUEMzNTdhT2pvWFpQUUtSLldMQ0Jnci5semdlIn0sImlhdCI6MTYzMDA2MTM4OX0.LgD1lcLLFSr6v2YJougll0NatocuQRqaxzAS_fuiZiY",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{guild.id}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2000/current/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"current",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "completedOrder",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdG5hbWUiOiJQYXVsIiwibGFzdG5hbWUiOiJQSE9FTklYIiwicGFzc3dvcmRfZGlnZXN0IjoiJDJiJDEwJGsuUUJsSVlEaDdnSTgvNVd1QnF1RnVQL01CUEMzNTdhT2pvWFpQUUtSLldMQ0Jnci5semdlIn0sImlhdCI6MTYzMDA2MTM4OX0.LgD1lcLLFSr6v2YJougll0NatocuQRqaxzAS_fuiZiY",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{guild.id}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2000/completed/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"completed",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "top 5",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdG5hbWUiOiJQYXVsIiwibGFzdG5hbWUiOiJQSE9FTklYIiwicGFzc3dvcmRfZGlnZXN0IjoiJDJiJDEwJGsuUUJsSVlEaDdnSTgvNVd1QnF1RnVQL01CUEMzNTdhT2pvWFpQUUtSLldMQ0Jnci5semdlIn0sImlhdCI6MTYzMDA2MTM4OX0.LgD1lcLLFSr6v2YJougll0NatocuQRqaxzAS_fuiZiY",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{guild.id}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2000/top",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"top"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "productByCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdG5hbWUiOiJQYXVsIiwibGFzdG5hbWUiOiJQSE9FTklYIiwicGFzc3dvcmRfZGlnZXN0IjoiJDJiJDEwJGsuUUJsSVlEaDdnSTgvNVd1QnF1RnVQL01CUEMzNTdhT2pvWFpQUUtSLldMQ0Jnci5semdlIn0sImlhdCI6MTYzMDA2MTM4OX0.LgD1lcLLFSr6v2YJougll0NatocuQRqaxzAS_fuiZiY",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{guild.id}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2000/category/two-hand",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"category",
+								"two-hand"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdG5hbWUiOiJQYXVsIiwibGFzdG5hbWUiOiJQSE9FTklYIiwicGFzc3dvcmRfZGlnZXN0IjoiJDJiJDEwJGsuUUJsSVlEaDdnSTgvNVd1QnF1RnVQL01CUEMzNTdhT2pvWFpQUUtSLldMQ0Jnci5semdlIn0sImlhdCI6MTYzMDA2MTM4OX0.LgD1lcLLFSr6v2YJougll0NatocuQRqaxzAS_fuiZiY",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{guild.id}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2000/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdG5hbWUiOiJQYXVsIiwibGFzdG5hbWUiOiJQSE9FTklYIiwicGFzc3dvcmRfZGlnZXN0IjoiJDJiJDEwJGsuUUJsSVlEaDdnSTgvNVd1QnF1RnVQL01CUEMzNTdhT2pvWFpQUUtSLldMQ0Jnci5semdlIn0sImlhdCI6MTYzMDA2MTM4OX0.LgD1lcLLFSr6v2YJougll0NatocuQRqaxzAS_fuiZiY",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{guild.id}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2000/orders/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"orders",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdG5hbWUiOiJQYXVsIiwibGFzdG5hbWUiOiJQSE9FTklYIiwicGFzc3dvcmRfZGlnZXN0IjoiJDJiJDEwJGsuUUJsSVlEaDdnSTgvNVd1QnF1RnVQL01CUEMzNTdhT2pvWFpQUUtSLldMQ0Jnci5semdlIn0sImlhdCI6MTYzMDA2MTM4OX0.LgD1lcLLFSr6v2YJougll0NatocuQRqaxzAS_fuiZiY",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{guild.id}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"complete\",\r\n    \"user_id\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2000/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdG5hbWUiOiJQYXVsIiwibGFzdG5hbWUiOiJQSE9FTklYIiwicGFzc3dvcmRfZGlnZXN0IjoiJDJiJDEwJGsuUUJsSVlEaDdnSTgvNVd1QnF1RnVQL01CUEMzNTdhT2pvWFpQUUtSLldMQ0Jnci5semdlIn0sImlhdCI6MTYzMDA2MTM4OX0.LgD1lcLLFSr6v2YJougll0NatocuQRqaxzAS_fuiZiY",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{guild.id}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\": 7,\r\n    \"product_id\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2000/orders/6/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"orders",
+								"6",
+								"product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdG5hbWUiOiJQYXVsIiwibGFzdG5hbWUiOiJQSE9FTklYIiwicGFzc3dvcmRfZGlnZXN0IjoiJDJiJDEwJGsuUUJsSVlEaDdnSTgvNVd1QnF1RnVQL01CUEMzNTdhT2pvWFpQUUtSLldMQ0Jnci5semdlIn0sImlhdCI6MTYzMDA2MTM4OX0.LgD1lcLLFSr6v2YJougll0NatocuQRqaxzAS_fuiZiY",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{guild.id}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2000/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdG5hbWUiOiJQYXVsIiwibGFzdG5hbWUiOiJQSE9FTklYIiwicGFzc3dvcmRfZGlnZXN0IjoiJDJiJDEwJGsuUUJsSVlEaDdnSTgvNVd1QnF1RnVQL01CUEMzNTdhT2pvWFpQUUtSLldMQ0Jnci5semdlIn0sImlhdCI6MTYzMDA2MTM4OX0.LgD1lcLLFSr6v2YJougll0NatocuQRqaxzAS_fuiZiY",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{guild.id}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2000/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdG5hbWUiOiJQYXVsIiwibGFzdG5hbWUiOiJQSE9FTklYIiwicGFzc3dvcmRfZGlnZXN0IjoiJDJiJDEwJGsuUUJsSVlEaDdnSTgvNVd1QnF1RnVQL01CUEMzNTdhT2pvWFpQUUtSLldMQ0Jnci5semdlIn0sImlhdCI6MTYzMDA2MTM4OX0.LgD1lcLLFSr6v2YJougll0NatocuQRqaxzAS_fuiZiY",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{guild.id}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"name\":\"pear\",\r\n    \"category\":\"accessory\",\r\n    \"price\":\"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2000/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "authentificate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdG5hbWUiOiJGcmFuY29pcyIsImxhc3RuYW1lIjoiV0VSWUhBIiwicGFzc3dvcmRfZGlnZXN0IjoiJDJiJDEwJDhlWHU0U0ZoTzFrWXJwaE1aTlE5LnVINjA1NEM4WnRDSGN4RnBnSXFDLnVzcVBNZzh0UTJHIn0sImlhdCI6MTYyOTk5ODA2NH0.xvAaUL--ILoNRgxy2oPAHYVzCG2X-h-ex94gkFJ3dg4",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{guild.id}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Francois\",\r\n    \"lastName\": \"WERYHA\",\r\n    \"password\": \"passypass\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2000/users/authentificate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"users",
+								"authentificate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "index",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdG5hbWUiOiJGcmFuY29pcyIsImxhc3RuYW1lIjoiV0VSWUhBIiwicGFzc3dvcmRfZGlnZXN0IjoiJDJiJDEwJDhlWHU0U0ZoTzFrWXJwaE1aTlE5LnVINjA1NEM4WnRDSGN4RnBnSXFDLnVzcVBNZzh0UTJHIn0sImlhdCI6MTYyOTk5ODA2NH0.xvAaUL--ILoNRgxy2oPAHYVzCG2X-h-ex94gkFJ3dg4",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{guild.id}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Francois\",\r\n    \"lastName\": \"WERYHA\",\r\n    \"password\": \"passypass\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdG5hbWUiOiJGcmFuY29pcyIsImxhc3RuYW1lIjoiV0VSWUhBIiwicGFzc3dvcmRfZGlnZXN0IjoiJDJiJDEwJDhlWHU0U0ZoTzFrWXJwaE1aTlE5LnVINjA1NEM4WnRDSGN4RnBnSXFDLnVzcVBNZzh0UTJHIn0sImlhdCI6MTYyOTk5ODA2NH0.xvAaUL--ILoNRgxy2oPAHYVzCG2X-h-ex94gkFJ3dg4",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{guild.id}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Francois\",\r\n    \"lastName\": \"WERYHA\",\r\n    \"password\": \"passypass\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2000/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdG5hbWUiOiJGcmFuY29pcyIsImxhc3RuYW1lIjoiV0VSWUhBIiwicGFzc3dvcmRfZGlnZXN0IjoiJDJiJDEwJDhlWHU0U0ZoTzFrWXJwaE1aTlE5LnVINjA1NEM4WnRDSGN4RnBnSXFDLnVzcVBNZzh0UTJHIn0sImlhdCI6MTYyOTk5ODA2NH0.xvAaUL--ILoNRgxy2oPAHYVzCG2X-h-ex94gkFJ3dg4",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{guild.id}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"firstName\":\"Bryan\",\r\n    \"lastName\":\"FURY\",\r\n    \"password\":\"qwer\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdG5hbWUiOiJGcmFuY29pcyIsImxhc3RuYW1lIjoiV0VSWUhBIiwicGFzc3dvcmRfZGlnZXN0IjoiJDJiJDEwJDhlWHU0U0ZoTzFrWXJwaE1aTlE5LnVINjA1NEM4WnRDSGN4RnBnSXFDLnVzcVBNZzh0UTJHIn0sImlhdCI6MTYyOTk5ODA2NH0.xvAaUL--ILoNRgxy2oPAHYVzCG2X-h-ex94gkFJ3dg4",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{guild.id}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newFirstName\": \"Paul\",\r\n    \"newLastName\": \"PHOENIX\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2000/users/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"users",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdG5hbWUiOiJGcmFuY29pcyIsImxhc3RuYW1lIjoiV0VSWUhBIiwicGFzc3dvcmRfZGlnZXN0IjoiJDJiJDEwJDhlWHU0U0ZoTzFrWXJwaE1aTlE5LnVINjA1NEM4WnRDSGN4RnBnSXFDLnVzcVBNZzh0UTJHIn0sImlhdCI6MTYyOTk5ODA2NH0.xvAaUL--ILoNRgxy2oPAHYVzCG2X-h-ex94gkFJ3dg4",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{guild.id}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Francois\",\r\n    \"lastName\": \"WERYHA\",\r\n    \"password\": \"passypass\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2000/users/delete/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"users",
+								"delete",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

@@ -1,0 +1,64 @@
+{
+  "name": "lesson_api_database",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ext .ts",
+    "prettier": "prettier --config .prettierrc.json ./src/**/*.ts --write",
+    "build": "npx tsc",
+    "jasmine": "jasmine-ts",
+    "start": "nodemon src/server.ts",
+    "test": "db-migrate db:create full_stack_test && db-migrate --env test up:basic && db-migrate --env test up:advanced && jasmine-ts && db-migrate db:drop full_stack_test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kirovo/Less3.git"
+  },
+  "author": "Kirovo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kirovo/Less3/issues"
+  },
+  "homepage": "https://github.com/Kirovo/Less3#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "db-migrate": "^0.11.12",
+    "db-migrate-pg": "^1.2.2",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "g": "^2.0.1",
+    "git": "^0.1.5",
+    "jasmine": "^3.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "path": "^0.12.7",
+    "pg": "^8.7.1",
+    "prettier": "^2.3.2",
+    "supertest": "^6.1.6"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/eslint-config-prettier": "^6.11.0",
+    "@types/eslint-plugin-prettier": "^3.1.0",
+    "@types/express": "^4.17.13",
+    "@types/jasmine": "^3.8.2",
+    "@types/jsonwebtoken": "^8.5.5",
+    "@types/node": "^16.7.2",
+    "@types/pg": "^8.6.1",
+    "@types/prettier": "^2.3.2",
+    "@types/supertest": "^2.0.11",
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@typescript-eslint/eslint-plugin-tslint": "^4.30.0",
+    "@typescript-eslint/parser": "^4.30.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.1",
+    "jasmine-spec-reporter": "^7.0.0",
+    "jasmine-ts": "^0.4.0",
+    "nodemon": "^2.0.12",
+    "ts-node": "^10.2.1",
+    "tsc-watch": "^4.5.0",
+    "typescript": "^4.3.5"
+  }
+}
