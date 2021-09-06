@@ -99,12 +99,13 @@ export class UserStore {
 				parseInt(saltRounds as string)
 			);
 			const conn = await client.connect();
-			const sql = 'SELECT firstname, lastname, password_digest FROM users WHERE firstname = $1 AND lastname = $2 AND password_digest = $3';
+			const sql =
+				'SELECT firstname, lastname, password_digest FROM users WHERE firstname = $1 AND lastname = $2 AND password_digest = $3';
 			const result = await conn.query(sql, [u.firstname, u.lastname, hash]);
 			const user = result.rows[0];
-			conn.release();	
-			return user
-		}catch(err) {
+			conn.release();
+			return user;
+		} catch (err) {
 			throw new Error(`wrong user firstname or lastname or password : ${err}`);
 		}
 	}

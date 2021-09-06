@@ -31,9 +31,7 @@ export class OrderStore {
 		}
 	}
 
-	async show(
-		id: string
-	): Promise<{
+	async show(id: string): Promise<{
 		order_id: number | string;
 		status: string;
 		user_id: number | string;
@@ -52,9 +50,7 @@ export class OrderStore {
 		}
 	}
 
-	async create(
-		o: Order
-	): Promise<{
+	async create(o: Order): Promise<{
 		id: string | number;
 		status: string;
 		user_id: string | number;

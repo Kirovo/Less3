@@ -33,9 +33,7 @@ export class DashboardQueries {
 		}
 	}
 	// Getting current order with important informations for the user.
-	async currentOrder(
-		user_id: string
-	): Promise<
+	async currentOrder(user_id: string): Promise<
 		{
 			name: string;
 			category: string;
@@ -56,9 +54,7 @@ export class DashboardQueries {
 		}
 	}
 	// Getting completed order with the information of the order and the user who completed it.
-	async completedOrder(
-		user_id: string
-	): Promise<
+	async completedOrder(user_id: string): Promise<
 		{
 			order_id: number | string;
 			status: string;

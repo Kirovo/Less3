@@ -5,7 +5,7 @@ import tokenReader from '../utilities/tokenReader';
 import jwt from 'jsonwebtoken';
 
 // Building endpoints
-const userRoutes = (app: express.Application):void => {
+const userRoutes = (app: express.Application): void => {
 	app.get('/users', tokenReader, index);
 	app.get('/users/authentificate', authentificate);
 	app.get('/users/:id', tokenReader, show);
@@ -37,13 +37,16 @@ const create = async (_req: Request, res: Response) => {
 	try {
 		const newUser = await store.create(user);
 
-		const token = jwt.sign({ user: newUser }, process.env.TOKEN_SECRET as string);
+		const token = jwt.sign(
+			{ user: newUser },
+			process.env.TOKEN_SECRET as string
+		);
 
 		res.json(token);
 	} catch (err) {
 		res.status(400);
-		console.log(err)
-		res.json(err as string+ user);
+		console.log(err);
+		res.json((err as string) + user);
 		return;
 	}
 };
@@ -84,12 +87,12 @@ const authentificate = async (_req: Request, res: Response) => {
 	};
 
 	try {
-		const identity = await store.authentificate(user)
-		const token = jwt.sign({identity}, process.env.TOKEN_SECRET as string);
+		const identity = await store.authentificate(user);
+		const token = jwt.sign({ identity }, process.env.TOKEN_SECRET as string);
 		res.json(token);
 	} catch (err) {
 		res.status(400);
-		res.json(err as string + user);
+		res.json((err as string) + user);
 		return;
 	}
 };

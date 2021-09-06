@@ -4,7 +4,7 @@ import DashboardQueries from '../services/dashboard';
 import tokenReader from '../utilities/tokenReader';
 
 // Building endpoints
-const dashboardRoutes = (app: express.Application):void => {
+const dashboardRoutes = (app: express.Application): void => {
 	app.get('/top', top);
 	app.get('/category/:category', category);
 	app.get('/current/:id', tokenReader, current);

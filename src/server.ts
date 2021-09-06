@@ -32,4 +32,4 @@ app.listen(port, function () {
 });
 
 // Exporting the express application to test endpoints
-export default app 
+export default app;

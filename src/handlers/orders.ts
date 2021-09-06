@@ -3,7 +3,7 @@ import express, { Request, Response } from 'express';
 import { Order, OrderStore } from '../models/order';
 
 // Building endpoints
-const orderRoutes = (app: express.Application):void => {
+const orderRoutes = (app: express.Application): void => {
 	app.get('/orders', index);
 	app.get('/orders/:id', show);
 	app.post('/orders', create);
@@ -34,7 +34,7 @@ const create = async (_req: Request, res: Response) => {
 		res.json(newOrder);
 	} catch (err) {
 		res.status(400);
-		res.json(err as string+ order);
+		res.json((err as string) + order);
 		return;
 	}
 };

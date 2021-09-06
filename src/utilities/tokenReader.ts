@@ -5,7 +5,7 @@ import jwt from 'jsonwebtoken';
 import { Request, Response, NextFunction } from 'express';
 
 // Manage the access thanks to the given token from the Authorization header
-const tokenReader = (req: Request, res: Response, next: NextFunction):void => {
+const tokenReader = (req: Request, res: Response, next: NextFunction): void => {
 	try {
 		// Getting the identification token from the Authorization header
 		const authorizationHeader = req.headers.authorization as string;

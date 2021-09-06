@@ -4,7 +4,7 @@ import { Product, ProductStore } from '../models/product';
 import tokenReader from '../utilities/tokenReader';
 
 // Building endpoints
-const productRoutes = (app: express.Application):void => {
+const productRoutes = (app: express.Application): void => {
 	app.get('/products', index);
 	app.get('/products/:id', show);
 	app.post('/products', tokenReader, create);
@@ -37,7 +37,7 @@ const create = async (_req: Request, res: Response) => {
 		res.json(newProduct);
 	} catch (err) {
 		res.status(400);
-		res.json(err as string+ product);
+		res.json((err as string) + product);
 		return;
 	}
 };
