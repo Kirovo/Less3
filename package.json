@@ -9,7 +9,8 @@
     "build": "npx tsc",
     "jasmine": "jasmine-ts",
     "start": "nodemon src/server.ts",
-    "test": "db-migrate db:create full_stack_test && db-migrate --env test up:basic && db-migrate --env test up:advanced && jasmine-ts && db-migrate db:drop full_stack_test"
+    "test": "db-migrate db:create full_stack_test && db-migrate --env test up:basic && db-migrate --env test up:advanced && jasmine-ts ",
+    "test2": "db-migrate db:create full_stack_develop && db-migrate --env dev up:basic && db-migrate --env dev up:advanced && jasmine-ts && db-migrate db:drop full_stack_develop"
   },
   "repository": {
     "type": "git",

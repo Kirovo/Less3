@@ -4,15 +4,15 @@
         "host": "127.0.0.1",
         "port":"3000",
         "database": "full_stack_dev",
-        "user": "postgres",
-        "password": "Cyber123!"
+        "user": {"ENV":"POSTGRES_USER"},
+        "password": {"ENV":"POSTGRES_PASSWORD"}
     },
     "test": {
         "driver": "pg",
         "host": "127.0.0.1",
         "port":"3000",
         "database": "full_stack_test",
-        "user": "postgres",
-        "password": "Cyber123!"
+        "user": {"ENV":"POSTGRES_USER"},
+        "password": {"ENV":"POSTGRES_PASSWORD"}
     }
 }

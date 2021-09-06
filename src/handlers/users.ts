@@ -42,7 +42,8 @@ const create = async (_req: Request, res: Response) => {
 		res.json(token);
 	} catch (err) {
 		res.status(400);
-		res.json(err + user);
+		console.log(err)
+		res.json(err as string+ user);
 		return;
 	}
 };
@@ -83,11 +84,12 @@ const authentificate = async (_req: Request, res: Response) => {
 	};
 
 	try {
-		const token = jwt.sign({ user: user }, process.env.TOKEN_SECRET as string);
+		const identity = await store.authentificate(user)
+		const token = jwt.sign({identity}, process.env.TOKEN_SECRET as string);
 		res.json(token);
 	} catch (err) {
 		res.status(400);
-		res.json(err + user);
+		res.json(err as string + user);
 		return;
 	}
 };

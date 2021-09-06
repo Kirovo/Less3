@@ -30,7 +30,8 @@ following informations:
 - To be able to use psql commands from PostgreSQL, add the
 directory to /bin folder of PostgreSQL installation in the "Path" 
 environement variable on you computer.
-- On the CLI of your code editor, run the following commands:
+- On the CLI of your code editor you can run the following commands
+to start import all datas and tables:
 
 > cat DB.txt | psql -h localhost -p 3000 -U postgres full_stack_dev
 > _Enter the password : "Cyber123!"._
@@ -39,10 +40,10 @@ environement variable on you computer.
 
 
 ## Check if it worked
-- Enter the command "\dt". 5 rows should appear. Otherwise the database
-can still be setup manually with the same configuraton.
+- Enter the command "\dt". 5 rows should appear. Otherwise the database can still be setup manually with the same configuraton.
 - Disconnect from the database "\q"
 
+Note: you can as well use migrations for table creations, see after.
 
 # Application
 ## Run
@@ -68,6 +69,7 @@ ENV=dev
 BCRYPT_PASSWORD=I_am_a_password_yay_:)
 SALT_ROUNDS=10
 TOKEN_SECRET=123456789
+TEST_TOKEN='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzA5MjQ4ODl9.4reKUMpuR-B0cpQFqcaDKueCoSJubYoiAyZqYPKpHTU'
 
 ## Migration
 Migration depend on the position of generated sql files in migration 
@@ -75,24 +77,27 @@ directory wich depend of the timestamp in their names.
 
 Tables like 'order_products' or 'orders' cannot be created before
 tables like 'products' or 'users' due to foreign key restictions.
-So migration is set to be built throught 2 folders (advanced, basic)
+So migration is set to be built throught 3 folders (basic, advanced, complexe)
 
-to execute migration:
+to execute migration i dev environement:
 - create a database where you want to test the migration
-> db-migrate db:create full_stack_test
+> CREATE DATABASE full_stack_dev
 - run the following commands to create empty tables:
-> db-migrate --env test up:basic
-> db-migrate --env test up:advanced
+> db-migrate --env dev up:basic
+> db-migrate --env dev up:advanced
+> db-migrate --env dev up:complexe
 - run the following commands to remove them:
-> db-migrate --env test down:basic
-> db-migrate --env test down:basic
-- Drop the database:
-> db-migrate db:drop full_stack_test
+> db-migrate --env dev down:complexe
+> db-migrate --env dev down:advanced
+> db-migrate --env dev down:basic
 
-This process is automaticaly generated for testing
+This process is automaticaly generated for testing with a testing 
+environements (--env test) and db:create and db:drop are used
+to generate and cancel the test database
 
-Note: it is important to drop the database to reuse the migration due to ENUM type 
-generation wich throw an error if it is generated a second time
+Note: it is important to drop the test database to reuse the 
+migration due to ENUM type generation wich throw an error if it is 
+created a second time
 
 # Test
 ## Ports
@@ -100,18 +105,18 @@ generation wich throw an error if it is generated a second time
 - Port for application : 2000
 
 ## Jasmine test
-Test protocol is managed throught the following command:
-- the environement variable 'ENV' is modified to testing with:
+Models and endpoints are managed throught the following command:
+- the environement variable 'ENV' is modified for testing:
 > $env:ENV = 'test' 
 - then :
 > npm run test
-- to return to developping environement :
+- to return to developing environement :
 > $env:ENV = 'dev' 
 
 Then models are tested and should return a sucessful test
 
 ## Endpoint test
-Endpoint are test with Postman.
+Endpoint can be tested with Postman.
 
 A Postman json file is accessible in the root of the project:
 

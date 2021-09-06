@@ -91,4 +91,21 @@ export class UserStore {
 			throw new Error(`unable delete user with id = ${id} : ${err}`);
 		}
 	}
+
+	async authentificate(u: User): Promise<User> {
+		try {
+			const hash = bcrypt.hashSync(
+				u.password + pepper,
+				parseInt(saltRounds as string)
+			);
+			const conn = await client.connect();
+			const sql = 'SELECT firstname, lastname, password_digest FROM users WHERE firstname = $1 AND lastname = $2 AND password_digest = $3';
+			const result = await conn.query(sql, [u.firstname, u.lastname, hash]);
+			const user = result.rows[0];
+			conn.release();	
+			return user
+		}catch(err) {
+			throw new Error(`wrong user firstname or lastname or password : ${err}`);
+		}
+	}
 }

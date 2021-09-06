@@ -34,7 +34,7 @@ const create = async (_req: Request, res: Response) => {
 		res.json(newOrder);
 	} catch (err) {
 		res.status(400);
-		res.json(err + order);
+		res.json(err as string+ order);
 		return;
 	}
 };

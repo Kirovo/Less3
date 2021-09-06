@@ -37,7 +37,7 @@ const create = async (_req: Request, res: Response) => {
 		res.json(newProduct);
 	} catch (err) {
 		res.status(400);
-		res.json(err + product);
+		res.json(err as string+ product);
 		return;
 	}
 };

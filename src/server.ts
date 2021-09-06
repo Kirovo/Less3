@@ -1,5 +1,5 @@
 // This file serve the application
-
+//
 // Importing modules to work with endpoints and json format
 import express, { Request, Response } from 'express';
 import bodyParser from 'body-parser';
@@ -30,3 +30,6 @@ dashboardRoutes(app);
 app.listen(port, function () {
 	console.log(`listening app on: ${port}`);
 });
+
+// Exporting the express application to test endpoints
+export default app 
