@@ -4,8 +4,8 @@ import client from '../../database';
 
 const request = supertest;
 describe('Test endpoint responses', () => {
+	const token = process.env.TEST_TOKEN as string;
 	describe('Test endpoint responses of userRoutes', () => {
-		const token = process.env.TEST_TOKEN as string;
 		it('gets the api endpoint GET /users', async () => {
 			await request(app)
 				.get('/users')
@@ -39,7 +39,6 @@ describe('Test endpoint responses', () => {
 		});
 	});
 	describe('Test endpoint responses of productRoutes', () => {
-		const token = process.env.TEST_TOKEN as string;
 		it('gets the api endpoint GET /products', async () => {
 			await request(app).get('/products').expect(200);
 		});
@@ -54,7 +53,6 @@ describe('Test endpoint responses', () => {
 		});
 	});
 	describe('Test endpoint responses of orderRoutes', () => {
-		const token = process.env.TEST_TOKEN as string;
 		it('gets the api endpoint GET /orders', async () => {
 			await request(app).get('/orders').expect(200);
 		});
@@ -69,7 +67,6 @@ describe('Test endpoint responses', () => {
 		});
 	});
 	describe('Test endpoint responses of productRoutes', () => {
-		const token = process.env.TEST_TOKEN as string;
 		it('gets the api endpoint GET /products', async () => {
 			await request(app).get('/products').expect(200);
 		});
@@ -84,7 +81,6 @@ describe('Test endpoint responses', () => {
 		});
 	});
 	describe('Test endpoint responses of dashboardRoutes', () => {
-		const token = process.env.TEST_TOKEN as string;
 		it('gets the api endpoint GET /top', async () => {
 			await request(app).get('/top').expect(200);
 		});
