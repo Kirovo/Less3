@@ -26,6 +26,15 @@ following informations:
 * Database : "full_stack_dev"
 * Password : "Cyber123!"
 
+Note: To install PostgreSQL visit the following link: 
+https://www.postgresql.org/ and click on download, then, 
+the setup application ask you the previously mentioned informations
+that you can input as showed and then in the installed folder
+is provided a psql terminal that you can use for the review.
+Otherwise please see after to use in the terminal of your code
+editor
+An application named pgAdmin in the installed folder can help you create your server throught a more visual way.
+
 ## Import the database
 - To be able to use psql commands from PostgreSQL, add the
 directory to /bin folder of PostgreSQL installation in the "Path" 
@@ -124,3 +133,8 @@ A Postman json file is accessible in the root of the project:
 
 You can import it on Postman it will open a ProjectLess3 Collection
 that you can use to test endpoints of the application.
+
+## Docker
+
+A Docker file is as well provided and usable but total OPTIONAL. The 
+docker-compose.yml is not used.
